@@ -3,8 +3,8 @@
   font-weight: 400;
   font-display: swap;
   src: 
-      url('./src/assets/fonts/PressStart2P-Regular.woff2') format('woff2'),
-      url('./src/assets/fonts/PressStart2P-Regular.woff') format('woff');
+      url('/fonts/PressStart2P-Regular.woff2') format('woff2'),
+      url('/fonts/PressStart2P-Regular.woff') format('woff');
 }
 
 :root {
@@ -36,7 +36,7 @@
   --bg-color-main: var(--dark-grey);
   --text-color: var(--white);
 
-  --bg-image: url('./src/assets/decorImage/background.svg');
+  --bg-image: url('/decorImage/background.svg');
 
   --page-inline-padding: clamp(0.625rem, -2.456rem + 13.1455vw, 9.375rem); /* 150px-10px */
 

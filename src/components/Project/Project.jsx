@@ -1,4 +1,5 @@
 import styles from './Project.module.css'
+import { images } from '../../assets/cardImage/images.js';
 
 export const Project = (props) => {
     const {imagePath, title, description, link} = props;
@@ -10,7 +11,7 @@ export const Project = (props) => {
     return(
         <li className={styles.project}>
             <article className={styles.card}>
-                <img className={styles.cardImage} src={`../../src/assets/cardImage/${imagePath}`} alt="" />
+                <img className={styles.cardImage} src={images[imagePath]} alt="" />
                 <div className={styles.cardInformationBlock}>
                     <div className={styles.textModule}>
                         <h3 className={styles.title}>{title}</h3>
