@@ -12,8 +12,14 @@
     block-size: var(--header-block-size);
     display: grid;
     grid-template-rows: max-content max-content 1fr;
+    background-color: var(--bg-color-header);
+    background-image: var(--bg-image);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     color: var(--black);
-    padding: 150px 150px;
+    padding: var(--header-block-start-padding) var(--page-inline-padding) var(--header-block-end-padding) var(--page-inline-padding);
 }
 
 .logo {
@@ -66,21 +72,11 @@
     margin-inline-end: 0;
 }
 
-.header {
-    block-size: var(--header-block-size);
-    display: grid;
-    grid-template-rows: max-content max-content 1fr;
-    background-color: var(--bg-color-header);
-    background-image: var(--bg-image);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    color: var(--black);
-    padding: var(--header-block-start-padding) var(--page-inline-padding) var(--header-block-end-padding) var(--page-inline-padding);
-}
-
 @media (width <= 768px) {
+    .header {
+        background-attachment: none;
+    }
+    
     .logo {
         justify-content: center;
         padding: 20px 0;
