@@ -1,0 +1,43 @@
+.description {
+    inline-size: 100%;
+    border: 2px solid var(--light-grey);
+    border-radius: 15px;
+    background-color: var(--grey);
+    color: var(--beige);
+    padding: 30px;
+}
+
+.description p {
+    font-size: var(--about-description-font-size);
+    line-height: 40px;
+    white-space: pre-line;
+}
+
+.quotes {
+    color: var(--yellow);
+}
+
+.naming {
+    white-space: pre;
+    color: var(--light-blue);
+}
+
+.values {
+    color: var(--orange);
+}
+
+@media(width <= 768px) {
+    .description {
+        padding: 25px 15px;
+    }
+
+    .description p {
+        line-height: 30px;
+    }
+}
+
+@media (width <= 375px) {
+    .description {
+        padding: 20px 15px;
+    }
+}

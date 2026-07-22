@@ -1,0 +1,119 @@
+@keyframes subtitle {
+    0% {
+        content: '\00A0';
+    }
+
+    100% {
+        content: '.';
+    }
+}
+
+.header {
+    block-size: var(--header-block-size);
+    display: grid;
+    grid-template-rows: max-content max-content 1fr;
+    color: var(--black);
+    padding: 150px 150px;
+}
+
+.logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--white);
+    border: 5px solid var(--black);
+    border-radius: 15px;
+    margin-block-end: 50px;
+    padding: 30px;
+}
+
+.logoTitle {
+    font-size: var(--header-title-font-size);
+}
+
+.logoDecoratedZone {
+    display: flex;
+    gap: 20px;
+    align-items: end;
+}
+
+.subtitle {
+    font-size: var(--header-subtitle-font-size);
+    line-height: 35px;
+    white-space: pre-wrap;
+    color: var(--green);
+    padding-inline-start: 30px;
+}
+
+.subtitle::before {
+    content: '\00A0';
+    animation: subtitle 1s infinite linear;
+}  
+
+.description {
+    display: grid;
+    grid-template-columns: repeat(3, min-content);
+    font-size: var(--header-description-font-size);
+    align-self: flex-end;
+}
+
+.description p {
+    margin-inline-end: 24px;
+}
+
+.description p:nth-child(2),
+.description p:nth-child(3) {
+    margin-inline-end: 0;
+}
+
+.header {
+    block-size: var(--header-block-size);
+    display: grid;
+    grid-template-rows: max-content max-content 1fr;
+    background-color: var(--bg-color-header);
+    background-image: var(--bg-image);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: var(--black);
+    padding: var(--header-block-start-padding) var(--page-inline-padding) var(--header-block-end-padding) var(--page-inline-padding);
+}
+
+@media (width <= 768px) {
+    .logo {
+        justify-content: center;
+        padding: 20px 0;
+    }
+
+    .logoDecoratedZone {
+        display: none;
+    }
+
+    .description {
+        grid-template-columns: none;
+        grid-template-rows: repeat(3, min-content);
+    }
+
+    .description p {
+        line-height: 36px;
+        margin-inline-end: 0;
+        padding: 0 10px;
+    }
+
+    .description p:nth-child(1),
+    .description p:nth-child(3) {
+        justify-self: end;
+        inline-size: fit-content;
+        background-color: var(--black);
+        color: var(--white);
+    }
+
+    .description p:nth-child(1) {
+        margin-block-end: 30px;
+    }
+    
+    .description p:nth-child(3) {
+        justify-self: start; 
+    }
+}

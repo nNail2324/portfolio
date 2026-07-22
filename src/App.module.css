@@ -1,0 +1,8 @@
+.app {
+  inline-size: 100%;
+  font-family: var(--page-font-family);
+  font-weight: var(--page-font-weight);
+  text-transform: uppercase;
+  background-color: var(--bg-color-main);
+}
+

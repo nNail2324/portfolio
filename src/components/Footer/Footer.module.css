@@ -1,0 +1,127 @@
+@keyframes star {
+    0% {
+        fill: var(--white);
+    }
+
+    50% {
+        fill: var(--dark-white);
+    }
+
+    100% {
+        fill: var(--white);
+    }
+}
+
+
+@keyframes little-star {
+    0% {
+        fill: var(--white);
+    }
+
+    50% {
+        fill: var(--light-grey);
+    }
+
+    100% {
+        fill: var(--white);
+    }
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 var(--page-inline-padding) var(--footer-block-end-padding) var(--page-inline-padding);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.logoTitle {
+    font-size: var(--footer-title-font-size);
+    color: var(--white);
+}
+
+.star {
+    transition: fill 0.3s ease;
+    animation: star 1s infinite 0.5s linear;
+}
+
+.littleStar {
+    transition: fill 0.3s ease;
+    animation: little-star 1.5s infinite linear;
+}
+
+.socialList {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.socialListItem {
+    list-style: none;
+}
+
+.socialLink {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    position: relative; 
+}
+
+.socialLink:focus {
+    outline: none;
+}
+
+.socialLink:focus-visible {
+    outline: 1px solid var(--white);
+    outline-offset: 1px;
+}
+
+.socialLinkText {
+    color: var(--white);
+    text-transform: lowercase;
+    position: relative;
+}
+
+.socialLinkText::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    display: block;
+    inline-size: 0%;
+    block-size: 2px;
+    background-color: var(--white);
+    transition: inline-size 0.3s ease-out;
+}
+
+.socialLink:hover .socialLinkText::after {
+    inline-size: 100%;
+}
+
+@media (width <= 768px) {
+    .logoTitle {
+        font-size: clamp(0.75rem, 0.5711rem + 0.7634vw, 0.9375rem);
+    }
+
+    .logoImage {
+        block-size: clamp(1.5625rem, 0.9661rem + 2.5445vw, 2.1875rem);
+    }
+
+    .socialList {
+        gap: 10px;
+    }
+
+    .socialLinkText {
+        display: none;
+    }
+
+    .socialLinkIcon {
+        inline-size: clamp(1.5625rem, 0.9065rem + 2.799vw, 2.25rem);
+    }
+}
