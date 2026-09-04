@@ -2,7 +2,7 @@ import styles from './Project.module.css'
 import { images } from '../../assets/cardImage/images.js';
 
 export const Project = (props) => {
-    const {imagePath, title, description, link} = props;
+    const {imagePath, title, stack = [], link} = props;
 
     const handleClick = () => {
         window.open(link, '_blank');
@@ -15,7 +15,11 @@ export const Project = (props) => {
                 <div className={styles.cardInformationBlock}>
                     <div className={styles.textModule}>
                         <h3 className={styles.title}>{title}</h3>
-                        <p className={styles.description}>{description}</p>
+                        {stack.length > 0 && (
+                            <p className={styles.stack}>
+                                {stack.join(', ')}
+                            </p>
+                        )}
                     </div>
                     <div className={styles.buttons}>
                         <button className={styles.button} onClick={handleClick}>

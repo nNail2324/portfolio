@@ -6,7 +6,7 @@ export const ProjectsSection = ({projects}) => {
         <ul className={styles.projectsList}>
             {
                 projects.map((project, index) => (
-                    <Project key={index} imagePath={project.imagePath} title={project.title} description={project.description} link={project.link} />
+                    <Project key={index} imagePath={project.imagePath} title={project.title} stack={project.stack} link={project.link} />
                 ))
             }
         </ul>

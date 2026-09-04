@@ -16,7 +16,7 @@
   --section-title-font-size: clamp(1.875rem, 1.6549rem + 0.939vw, 2.5rem);
   --about-description-font-size: clamp(0.5625rem, 0.4085rem + 0.6573vw, 1rem);
   --information-block-title-font-size: clamp(1.125rem, 0.9489rem + 0.7512vw, 1.625rem);
-  --information-block-description-font-size: clamp(0.875rem, 0.787rem + 0.3756vw, 1.125rem);
+  --information-block-stack-font-size: clamp(0.75rem, 0.618rem + 0.5634vw, 1.125rem);
   --button-font-size: clamp(0.75rem, 0.662rem + 0.3756vw, 1rem);
   --footer-title-font-size: 15px;
   

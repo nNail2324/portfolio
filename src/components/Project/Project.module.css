@@ -31,7 +31,7 @@
 .textModule {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
 }
 
 .title {
@@ -39,9 +39,10 @@
     line-height: 35px;
 }
 
-.description {
-    font-size: var(--information-block-description-font-size);
+.stack {
+    font-size: var(--information-block-stack-font-size);
     text-transform: none;
+    line-height: 20px;
 }
 
 .button {
@@ -104,11 +105,11 @@
     }
 
     .textModule {
-        gap: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);;
+        gap: 7px;
     }
 
     .title {
-        line-height: 28px;
+        line-height: 1;
     }
 
     .buttonImage {
@@ -117,5 +118,11 @@
 
     .buttonText {
         display: none;
+    }
+}
+
+@media (width <= 375px) {
+    .textModule {
+        gap: 5px;
     }
 }
